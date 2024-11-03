@@ -1,0 +1,167 @@
+html{
+    scroll-padding-top: 40px;
+}
+body{
+    font-family: "Nunito Sans", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat", sans-serif; 
+}
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --mainColor:#e65f78
+}
+.pink{
+    color: var(--mainColor);
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/header-bg.jpeg);
+    min-height: calc(100vh - 70px);
+    background-position: center center;
+    background-size: cover;
+}
+header .animated{
+    font-size: 65px;
+}
+header h1::after{
+    content: "";
+    animation: header-animation 7s infinite;
+}
+header .btn-cv{
+    border: 1px solid white;
+    color: white;
+}
+header .btn-cv:hover{
+    color: black;
+    background-color: white;
+}
+.setting{
+    width: 40px;
+    height: 40px;
+    background-color: var(--mainColor);
+    top: 25%;
+    border-radius:0 10px 10px 0;
+    z-index: 99;
+}
+.shape{
+    width: 40px;
+    height: 80px;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    animation: move 1s infinite;
+}
+.shape::after{
+    content: "";
+    width: 4px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--mainColor);
+    font-weight: bolder;
+}
+.about .right-about ul li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #cbcbcb;
+}
+.about .right-about ul li:hover{
+    transition: all 500ms ease;
+    border-color: var(--mainColor);
+    color: var(--mainColor);
+}
+.client{
+    background-color: #f1f1f1;
+}
+.carousel-indicators [data-bs-target]{
+    background-color: var(--mainColor);
+    height: 6px;
+}
+.nav-pills{
+    display: flex;
+    justify-content: center;
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color: black;
+}
+.nav-pills .nav-link.active{
+    color: white;
+    background-color: var(--mainColor);
+    border-radius: 25px;
+}
+.portfolio-content .layer{
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    transition: all 0.5s;
+}
+.portfolio-content:hover .layer{
+    top: 0; 
+}
+.portfolio-content::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.portfolio-content:hover::after {
+    opacity: 0.5;
+}
+.portfolio-content img{
+    transition: all 0.5;
+}
+.portfolio-content:hover img{
+    transform: scale(1.2);
+}
+.blog h6 .main-text{
+   color: var(--mainColor);
+}
+.card{
+    border: none;
+}
+.contact .itemkk .iconk{
+    color: var(--mainColor);
+    font-size: 40px;
+}
+.contact .form-control:focus {
+    border-color: var(--mainColor);
+    box-shadow: 0 0 0 2px #e65f78;;
+ }
+ .contact button{
+    background-color: var(--mainColor);
+ }
+ .contact button:hover{
+    background-color: var(--mainColor);
+ }
+ 
+@media screen and (max-width: 779px) {
+    header .animated{
+        font-size: 40px;
+    }
+    h1::after{
+        font-size: 40px;
+    }
+}
